@@ -30,9 +30,8 @@ This is the folder where checkpoints are stored. Our fine-tuned model, valid and
 
 This is the folder where datasets are stored. 
 
-new_train_data.jsonl and new_test_data.jsonl are the datasets with knowledge. 
-
-new_train_data.jsonl and new_test_data.jsonl are the datasets without knowledge. 
+- new_train_data.jsonl and new_test_data.jsonl are the datasets with knowledge. 
+- new_train_data.jsonl and new_test_data.jsonl are the datasets without knowledge. 
 
 5. SMF/terminal records 
 [Folder](<SMF/terminal records/>)
