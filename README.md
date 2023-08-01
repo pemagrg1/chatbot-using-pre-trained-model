@@ -14,13 +14,36 @@ The results showed that the model using external knowledge performed better in g
 Future work includes expanding the training data for dialogue, improving dataset quality, and adding additional features like Navigation Support, Real-Time Updates, and a Recommendations system based on user preferences.
 <br>
 
+## FOLDER INFORMATION
+1. SMF
+[Folder](SMF)
+
+2. SMF/ckpt
+[Folder](SMF/ckpt/)
+
+3. SMF/json_data
+[Folder](SMF/json_data/)
+
+4. SMF/analysis.py
+[File](SMF/analysis.py)
+
+5. SMF/SMF_dataset.py
+[File](SMF/SMF_dataset.py)
+
+6. SMF/SMF_server.py
+[File](SMF/SMF_server.py)
+
 ## SETUP
 [GODEL](https://github.com/microsoft/GODEL.git)
-1. Install the requirements
+1. Clone the GODEL repo
+```
+$ git clone https://github.com/microsoft/GODEL.git
+```
+2. Install the requirements
 ```
 pip install -r GODEL/requirements.txt
 ```
-2. Download the pretrained model
+3. Download the pretrained model
 ```
 $ git lfs install
 $ git clone https://huggingface.co/microsoft/GODEL-v1_1-base-seq2seq
@@ -43,14 +66,8 @@ python train.py --model_name_or_path GODEL-v1_1-base-seq2seq \
 	--save_every_checkpoint 
 ```
 
-## Interaction
-```
-python EXAMPLE_server.py # start the sever and expose 8080
-```
-
-
-# Start serving frontend page:
-```
+# Interact with the Chatbot
+1. Open a terminal and the following code: ```
 cd GODEL/html
 npm install
 npm run serve
@@ -58,3 +75,9 @@ npm run serve
 
 	--num_beams 5 \
 	--exp_name test1 --preprocessing_num_workers 24
+```
+
+2. Open another terminal and run the SMF_server.py file
+```
+python SMF/SMF_server.py # start the sever and expose 8080
+```
