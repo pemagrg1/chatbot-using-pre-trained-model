@@ -23,14 +23,17 @@ This is the folder where we store files relating to our fine-tuned model, includ
 3. SMF/ckpt
 [Folder](SMF/ckpt/)
 
-This is the folder where checkpoints are stored(It is too large for uploading in Github). 
+This is the folder where checkpoints are stored. Our fine-tuned model, valid and test results are stored here(It is too large for uploading in Github).   
 
 4. SMF/json_data
 [Folder](SMF/json_data/)
 
-This is the folder where datasets are stored.
+This is the folder where datasets are stored. 
+
 new_train_data.jsonl and new_test_data.jsonl are the datasets with knowledge. 
+
 new_train_data.jsonl and new_test_data.jsonl are the datasets without knowledge. 
+
 
 5. SMF/analysis.py
 [File](SMF/analysis.py)
@@ -46,6 +49,14 @@ This is the file for loading the dataset used in fine-tuning phases.
 [File](SMF/SMF_server.py)
 
 This is the file for running the server using our fine-tuned model.
+
+8. SMF/terminal records(with knowlegde).txt
+[File](SMF/terminal records(with knowlegde).txt)
+
+9. SMF/terminal records(without knowlegde).txt
+[File](SMF/terminal records(without knowlegde).txt)
+
+8. and 9. are files that record the terminal inputs and outputs. 
 
 ## SETUP
 [GODEL](https://github.com/microsoft/GODEL.git)
