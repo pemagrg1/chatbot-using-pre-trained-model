@@ -67,16 +67,12 @@ python train.py --model_name_or_path GODEL-v1_1-base-seq2seq \
 ```
 
 # Interact with the Chatbot
-1. Open a terminal and the following code: ```
+1. Open a terminal and the following code:
+```
 cd GODEL/html
 npm install
 npm run serve
 ```
-
-	--num_beams 5 \
-	--exp_name test1 --preprocessing_num_workers 24
-```
-
 2. Open another terminal and run the SMF_server.py file
 ```
 python SMF/SMF_server.py # start the sever and expose 8080
