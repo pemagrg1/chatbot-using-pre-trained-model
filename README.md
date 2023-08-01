@@ -16,11 +16,7 @@ Future work includes expanding the training data for dialogue, improving dataset
 
 <br>
 ## SETUP
-```
-pip install -r requirements.txt
-git lfs install
-git clone https://huggingface.co/microsoft/GODEL-v1_1-base-seq2seq
-```
+Incuded in [FinetuneModel Notebook](FinetuneModel.ipynb)
 
 
 ## Fine-tuning
