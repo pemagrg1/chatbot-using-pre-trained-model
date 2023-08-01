@@ -1,0 +1,713 @@
+python train.py --model_name_or_path GODEL-v1_1-base-seq2seq  --dataset_name ../SMF/SMF_dataset.py  --output_dir ../SMF/ckpt  --per_device_train_batch_size=2  --per_device_eval_batch_size=4  --max_target_length 128  --max_length 256   --num_train_epochs 50  --save_steps 10000  --num_beams 5  --exp_name wow-test --preprocessing_num_workers 24 --save_every_checkpoint 
+
+
+
+  warnings.warn(
+07/27/2023 02:57:28 - INFO - __main__ - ***** Running training *****
+07/27/2023 02:57:28 - INFO - __main__ -   Num examples = 40
+07/27/2023 02:57:28 - INFO - __main__ -   Num Epochs = 50
+07/27/2023 02:57:28 - INFO - __main__ -   Instantaneous batch size per device = 2
+07/27/2023 02:57:28 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 2
+07/27/2023 02:57:28 - INFO - __main__ -   Gradient Accumulation steps = 1
+07/27/2023 02:57:28 - INFO - __main__ -   Total optimization steps = 1000
+  0%|                                                                                                                                                                                                          | 0/1000 [00:00<?, ?it/s]07/27/2023 02:57:31 - INFO - __main__ -   EVALERR:  0.0023280842304229735
+ 50%|███████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                               | 500/1000 [00:02<00:02, 166.93it/s]07/27/2023 02:57:37 - INFO - __main__ - {'rouge1': 70.8872, 'rouge2': 59.6293, 'rougeL': 69.0146, 'rougeLsum': 69.0506}
+07/27/2023 02:57:37 - INFO - __main__ - {'bleu': 0.4433363578248735, 'precisions': [0.8274111675126904, 0.6892655367231638, 0.6242038216560509, 0.5620437956204379], 'brevity_penalty': 0.662875882177498, 'length_ratio': 0.7086330935251799, 'translation_length': 197, 'reference_length': 278}
+../SMF/ckpt\valid-step-20
+07/27/2023 02:57:37 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-20
+07/27/2023 02:57:40 - INFO - __main__ - {'rouge1': 70.8872, 'rouge2': 59.6293, 'rougeL': 69.0146, 'rougeLsum': 69.0506}
+07/27/2023 02:57:40 - INFO - __main__ - {'bleu': 0.4433363578248735, 'precisions': [0.8274111675126904, 0.6892655367231638, 0.6242038216560509, 0.5620437956204379], 'brevity_penalty': 0.662875882177498, 'length_ratio': 0.7086330935251799, 'translation_length': 197, 'reference_length': 278}
+../SMF/ckpt\test-step-20
+07/27/2023 02:57:40 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-20
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-20\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-20\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-20\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-20\special_tokens_map.json
+07/27/2023 02:57:41 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-20
+07/27/2023 02:57:41 - INFO - __main__ -   EVALERR:  0.05095410668849945
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:12<00:00, 71.32it/s]07/27/2023 02:57:47 - INFO - __main__ - {'rouge1': 73.591, 'rouge2': 64.0843, 'rougeL': 71.6047, 'rougeLsum': 71.7604}
+07/27/2023 02:57:47 - INFO - __main__ - {'bleu': 0.48295309288379007, 'precisions': [0.8374384236453202, 0.7213114754098361, 0.656441717791411, 0.6013986013986014], 'brevity_penalty': 0.6911087216029388, 'length_ratio': 0.7302158273381295, 'translation_length': 203, 'reference_length': 278}
+../SMF/ckpt\valid-step-40
+07/27/2023 02:57:47 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-40
+07/27/2023 02:57:50 - INFO - __main__ - {'rouge1': 73.591, 'rouge2': 64.0843, 'rougeL': 71.6047, 'rougeLsum': 71.7604}
+07/27/2023 02:57:50 - INFO - __main__ - {'bleu': 0.48295309288379007, 'precisions': [0.8374384236453202, 0.7213114754098361, 0.656441717791411, 0.6013986013986014], 'brevity_penalty': 0.6911087216029388, 'length_ratio': 0.7302158273381295, 'translation_length': 203, 'reference_length': 278}
+../SMF/ckpt\test-step-40
+07/27/2023 02:57:50 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-40
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-40\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-40\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-40\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-40\special_tokens_map.json
+07/27/2023 02:57:51 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-40
+07/27/2023 02:57:51 - INFO - __main__ -   EVALERR:  0.03899584293365479
+1500it [00:22, 60.25it/s]                                                                                                                                                                                                               07/27/2023 02:57:57 - INFO - __main__ - {'rouge1': 73.3823, 'rouge2': 63.9646, 'rougeL': 71.5913, 'rougeLsum': 71.563}
+07/27/2023 02:57:57 - INFO - __main__ - {'bleu': 0.4867124330279165, 'precisions': [0.794392523364486, 0.6804123711340206, 0.6149425287356322, 0.5584415584415584], 'brevity_penalty': 0.7415108977894643, 'length_ratio': 0.7697841726618705, 'translation_length': 214, 'reference_length': 278}
+../SMF/ckpt\valid-step-60
+07/27/2023 02:57:57 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-60
+07/27/2023 02:58:00 - INFO - __main__ - {'rouge1': 73.3823, 'rouge2': 63.9646, 'rougeL': 71.5913, 'rougeLsum': 71.563}
+07/27/2023 02:58:00 - INFO - __main__ - {'bleu': 0.4867124330279165, 'precisions': [0.794392523364486, 0.6804123711340206, 0.6149425287356322, 0.5584415584415584], 'brevity_penalty': 0.7415108977894643, 'length_ratio': 0.7697841726618705, 'translation_length': 214, 'reference_length': 278}
+../SMF/ckpt\test-step-60
+07/27/2023 02:58:00 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-60
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-60\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-60\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-60\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-60\special_tokens_map.json
+07/27/2023 02:58:01 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-60
+07/27/2023 02:58:01 - INFO - __main__ -   EVALERR:  0.028289001673460008
+2000it [00:33, 54.89it/s]07/27/2023 02:58:07 - INFO - __main__ - {'rouge1': 75.3862, 'rouge2': 66.9107, 'rougeL': 73.4662, 'rougeLsum': 73.4944}
+07/27/2023 02:58:07 - INFO - __main__ - {'bleu': 0.5187859314461222, 'precisions': [0.8215962441314554, 0.7253886010362695, 0.6705202312138728, 0.6143790849673203], 'brevity_penalty': 0.7370022607833765, 'length_ratio': 0.7661870503597122, 'translation_length': 213, 'reference_length': 278}
+../SMF/ckpt\valid-step-80
+07/27/2023 02:58:07 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-80
+07/27/2023 02:58:10 - INFO - __main__ - {'rouge1': 75.3862, 'rouge2': 66.9107, 'rougeL': 73.4662, 'rougeLsum': 73.4944}
+07/27/2023 02:58:10 - INFO - __main__ - {'bleu': 0.5187859314461222, 'precisions': [0.8215962441314554, 0.7253886010362695, 0.6705202312138728, 0.6143790849673203], 'brevity_penalty': 0.7370022607833765, 'length_ratio': 0.7661870503597122, 'translation_length': 213, 'reference_length': 278}
+../SMF/ckpt\test-step-80
+07/27/2023 02:58:10 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-80
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-80\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-80\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-80\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-80\special_tokens_map.json
+07/27/2023 02:58:13 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-80
+07/27/2023 02:58:13 - INFO - __main__ -   EVALERR:  0.02274214419722557
+2500it [00:44, 49.65it/s]07/27/2023 02:58:19 - INFO - __main__ - {'rouge1': 75.0321, 'rouge2': 65.9866, 'rougeL': 72.662, 'rougeLsum': 72.7204}
+07/27/2023 02:58:19 - INFO - __main__ - {'bleu': 0.4986814991786844, 'precisions': [0.8390243902439024, 0.7351351351351352, 0.6787878787878788, 0.6137931034482759], 'brevity_penalty': 0.7004042847765255, 'length_ratio': 0.737410071942446, 'translation_length': 205, 'reference_length': 278}
+../SMF/ckpt\valid-step-100
+07/27/2023 02:58:19 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-100
+07/27/2023 02:58:22 - INFO - __main__ - {'rouge1': 75.0321, 'rouge2': 65.9866, 'rougeL': 72.662, 'rougeLsum': 72.7204}
+07/27/2023 02:58:22 - INFO - __main__ - {'bleu': 0.4986814991786844, 'precisions': [0.8390243902439024, 0.7351351351351352, 0.6787878787878788, 0.6137931034482759], 'brevity_penalty': 0.7004042847765255, 'length_ratio': 0.737410071942446, 'translation_length': 205, 'reference_length': 278}
+../SMF/ckpt\test-step-100
+07/27/2023 02:58:22 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-100
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-100\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-100\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-100\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-100\special_tokens_map.json
+07/27/2023 02:58:23 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-100
+07/27/2023 02:58:24 - INFO - __main__ -   EVALERR:  0.019421180844306947
+3000it [00:55, 48.62it/s]07/27/2023 02:58:30 - INFO - __main__ - {'rouge1': 76.7977, 'rouge2': 67.5853, 'rougeL': 74.2828, 'rougeLsum': 74.358}
+07/27/2023 02:58:30 - INFO - __main__ - {'bleu': 0.5102855970942238, 'precisions': [0.8620689655172413, 0.7595628415300546, 0.7055214723926381, 0.6433566433566433], 'brevity_penalty': 0.6911087216029388, 'length_ratio': 0.7302158273381295, 'translation_length': 203, 'reference_length': 278}
+../SMF/ckpt\valid-step-120
+07/27/2023 02:58:30 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-120
+07/27/2023 02:58:34 - INFO - __main__ - {'rouge1': 76.7977, 'rouge2': 67.5853, 'rougeL': 74.2828, 'rougeLsum': 74.358}
+07/27/2023 02:58:34 - INFO - __main__ - {'bleu': 0.5102855970942238, 'precisions': [0.8620689655172413, 0.7595628415300546, 0.7055214723926381, 0.6433566433566433], 'brevity_penalty': 0.6911087216029388, 'length_ratio': 0.7302158273381295, 'translation_length': 203, 'reference_length': 278}
+../SMF/ckpt\test-step-120
+07/27/2023 02:58:34 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-120
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-120\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-120\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-120\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-120\special_tokens_map.json
+07/27/2023 02:58:35 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-120
+07/27/2023 02:58:35 - INFO - __main__ -   EVALERR:  0.014124502751976251
+3500it [01:06, 46.84it/s]07/27/2023 02:58:42 - INFO - __main__ - {'rouge1': 81.7402, 'rouge2': 74.5114, 'rougeL': 80.104, 'rougeLsum': 80.0326}
+07/27/2023 02:58:42 - INFO - __main__ - {'bleu': 0.5954849268857985, 'precisions': [0.8847926267281107, 0.7969543147208121, 0.7627118644067796, 0.7197452229299363], 'brevity_penalty': 0.7549483136762953, 'length_ratio': 0.7805755395683454, 'translation_length': 217, 'reference_length': 278}
+../SMF/ckpt\valid-step-140
+07/27/2023 02:58:42 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-140
+07/27/2023 02:58:45 - INFO - __main__ - {'rouge1': 81.7402, 'rouge2': 74.5114, 'rougeL': 80.104, 'rougeLsum': 80.0326}
+07/27/2023 02:58:45 - INFO - __main__ - {'bleu': 0.5954849268857985, 'precisions': [0.8847926267281107, 0.7969543147208121, 0.7627118644067796, 0.7197452229299363], 'brevity_penalty': 0.7549483136762953, 'length_ratio': 0.7805755395683454, 'translation_length': 217, 'reference_length': 278}
+../SMF/ckpt\test-step-140
+07/27/2023 02:58:45 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-140
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-140\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-140\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-140\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-140\special_tokens_map.json
+07/27/2023 02:58:46 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-140
+07/27/2023 02:58:46 - INFO - __main__ -   EVALERR:  0.012586236447095871
+4000it [01:18, 45.98it/s]07/27/2023 02:58:53 - INFO - __main__ - {'rouge1': 82.7747, 'rouge2': 77.2316, 'rougeL': 81.4603, 'rougeLsum': 81.4209}
+07/27/2023 02:58:53 - INFO - __main__ - {'bleu': 0.6526747833528017, 'precisions': [0.9022222222222223, 0.8390243902439024, 0.8054054054054054, 0.7636363636363637], 'brevity_penalty': 0.7901317655802487, 'length_ratio': 0.8093525179856115, 'translation_length': 225, 'reference_length': 278}
+../SMF/ckpt\valid-step-160
+07/27/2023 02:58:53 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-160
+07/27/2023 02:58:56 - INFO - __main__ - {'rouge1': 82.7747, 'rouge2': 77.2316, 'rougeL': 81.4603, 'rougeLsum': 81.4209}
+07/27/2023 02:58:56 - INFO - __main__ - {'bleu': 0.6526747833528017, 'precisions': [0.9022222222222223, 0.8390243902439024, 0.8054054054054054, 0.7636363636363637], 'brevity_penalty': 0.7901317655802487, 'length_ratio': 0.8093525179856115, 'translation_length': 225, 'reference_length': 278}
+../SMF/ckpt\test-step-160
+07/27/2023 02:58:56 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-160
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-160\config.json
+4000it [01:28, 45.98it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-160\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-160\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-160\special_tokens_map.json
+07/27/2023 02:58:58 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-160
+07/27/2023 02:58:58 - INFO - __main__ -   EVALERR:  0.008835973095148802
+4500it [01:29, 45.03it/s]07/27/2023 02:59:05 - INFO - __main__ - {'rouge1': 80.0692, 'rouge2': 73.9644, 'rougeL': 78.7246, 'rougeLsum': 78.5141}
+07/27/2023 02:59:05 - INFO - __main__ - {'bleu': 0.6400873251944171, 'precisions': [0.868995633187773, 0.8086124401913876, 0.7724867724867724, 0.727810650887574], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\valid-step-180
+07/27/2023 02:59:05 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-180
+07/27/2023 02:59:08 - INFO - __main__ - {'rouge1': 80.0692, 'rouge2': 73.9644, 'rougeL': 78.7246, 'rougeLsum': 78.5141}
+07/27/2023 02:59:08 - INFO - __main__ - {'bleu': 0.6400873251944171, 'precisions': [0.868995633187773, 0.8086124401913876, 0.7724867724867724, 0.727810650887574], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\test-step-180
+07/27/2023 02:59:08 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-180
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-180\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-180\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-180\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-180\special_tokens_map.json
+07/27/2023 02:59:10 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-180
+07/27/2023 02:59:10 - INFO - __main__ -   EVALERR:  0.007544589597731828
+5000it [01:41, 43.83it/s]07/27/2023 02:59:17 - INFO - __main__ - {'rouge1': 85.3692, 'rouge2': 79.6572, 'rougeL': 83.8444, 'rougeLsum': 83.7841}
+07/27/2023 02:59:17 - INFO - __main__ - {'bleu': 0.6821167082011451, 'precisions': [0.9288888888888889, 0.8731707317073171, 0.8432432432432433, 0.8121212121212121], 'brevity_penalty': 0.7901317655802487, 'length_ratio': 0.8093525179856115, 'translation_length': 225, 'reference_length': 278}
+../SMF/ckpt\valid-step-200
+07/27/2023 02:59:17 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-200
+07/27/2023 02:59:20 - INFO - __main__ - {'rouge1': 85.3692, 'rouge2': 79.6572, 'rougeL': 83.8444, 'rougeLsum': 83.7841}
+07/27/2023 02:59:20 - INFO - __main__ - {'bleu': 0.6821167082011451, 'precisions': [0.9288888888888889, 0.8731707317073171, 0.8432432432432433, 0.8121212121212121], 'brevity_penalty': 0.7901317655802487, 'length_ratio': 0.8093525179856115, 'translation_length': 225, 'reference_length': 278}
+../SMF/ckpt\test-step-200
+07/27/2023 02:59:20 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-200
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-200\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-200\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-200\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-200\special_tokens_map.json
+07/27/2023 02:59:23 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-200
+07/27/2023 02:59:23 - INFO - __main__ -   EVALERR:  0.005773382786661387
+5500it [01:54, 42.18it/s]07/27/2023 02:59:30 - INFO - __main__ - {'rouge1': 88.2481, 'rouge2': 82.4505, 'rougeL': 86.5709, 'rougeLsum': 86.186}
+07/27/2023 02:59:30 - INFO - __main__ - {'bleu': 0.7089496846595887, 'precisions': [0.9475982532751092, 0.8899521531100478, 0.8571428571428571, 0.8224852071005917], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\valid-step-220
+07/27/2023 02:59:30 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-220
+07/27/2023 02:59:33 - INFO - __main__ - {'rouge1': 88.2481, 'rouge2': 82.4505, 'rougeL': 86.5709, 'rougeLsum': 86.186}
+07/27/2023 02:59:33 - INFO - __main__ - {'bleu': 0.7089496846595887, 'precisions': [0.9475982532751092, 0.8899521531100478, 0.8571428571428571, 0.8224852071005917], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\test-step-220
+07/27/2023 02:59:33 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-220
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-220\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-220\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-220\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-220\special_tokens_map.json
+07/27/2023 02:59:35 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-220
+07/27/2023 02:59:35 - INFO - __main__ -   EVALERR:  0.004752150233834982
+6000it [02:06, 42.13it/s]07/27/2023 02:59:42 - INFO - __main__ - {'rouge1': 85.6975, 'rouge2': 80.9614, 'rougeL': 84.4217, 'rougeLsum': 84.3606}
+07/27/2023 02:59:42 - INFO - __main__ - {'bleu': 0.688532205311298, 'precisions': [0.9330357142857143, 0.8872549019607843, 0.8586956521739131, 0.8292682926829268], 'brevity_penalty': 0.7857854968482537, 'length_ratio': 0.8057553956834532, 'translation_length': 224, 'reference_length': 278}
+../SMF/ckpt\valid-step-240
+07/27/2023 02:59:42 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-240
+07/27/2023 02:59:45 - INFO - __main__ - {'rouge1': 85.6975, 'rouge2': 80.9614, 'rougeL': 84.4217, 'rougeLsum': 84.3606}
+07/27/2023 02:59:45 - INFO - __main__ - {'bleu': 0.688532205311298, 'precisions': [0.9330357142857143, 0.8872549019607843, 0.8586956521739131, 0.8292682926829268], 'brevity_penalty': 0.7857854968482537, 'length_ratio': 0.8057553956834532, 'translation_length': 224, 'reference_length': 278}
+../SMF/ckpt\test-step-240
+07/27/2023 02:59:45 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-240
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-240\config.json
+6000it [02:18, 42.13it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-240\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-240\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-240\special_tokens_map.json
+07/27/2023 02:59:48 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-240
+07/27/2023 02:59:48 - INFO - __main__ -   EVALERR:  0.0049095068909227844
+6500it [02:20, 40.64it/s]07/27/2023 02:59:55 - INFO - __main__ - {'rouge1': 88.1704, 'rouge2': 83.3479, 'rougeL': 86.8663, 'rougeLsum': 86.5777}
+07/27/2023 02:59:55 - INFO - __main__ - {'bleu': 0.7155828547791012, 'precisions': [0.9475982532751092, 0.8995215311004785, 0.8677248677248677, 0.834319526627219], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\valid-step-260
+07/27/2023 02:59:55 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-260
+07/27/2023 02:59:58 - INFO - __main__ - {'rouge1': 88.1704, 'rouge2': 83.3479, 'rougeL': 86.8663, 'rougeLsum': 86.5777}
+07/27/2023 02:59:58 - INFO - __main__ - {'bleu': 0.7155828547791012, 'precisions': [0.9475982532751092, 0.8995215311004785, 0.8677248677248677, 0.834319526627219], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\test-step-260
+07/27/2023 02:59:58 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-260
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-260\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-260\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-260\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-260\special_tokens_map.json
+07/27/2023 03:00:00 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-260
+07/27/2023 03:00:00 - INFO - __main__ -   EVALERR:  0.003593390878289938
+7000it [02:31, 41.09it/s]07/27/2023 03:00:07 - INFO - __main__ - {'rouge1': 85.4144, 'rouge2': 79.5934, 'rougeL': 83.7293, 'rougeLsum': 83.0741}
+07/27/2023 03:00:07 - INFO - __main__ - {'bleu': 0.6913458045025379, 'precisions': [0.9134199134199135, 0.8578199052132701, 0.8272251308900523, 0.7953216374269005], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-280
+07/27/2023 03:00:07 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-280
+07/27/2023 03:00:10 - INFO - __main__ - {'rouge1': 85.4144, 'rouge2': 79.5934, 'rougeL': 83.7293, 'rougeLsum': 83.0741}
+07/27/2023 03:00:10 - INFO - __main__ - {'bleu': 0.6913458045025379, 'precisions': [0.9134199134199135, 0.8578199052132701, 0.8272251308900523, 0.7953216374269005], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-280
+07/27/2023 03:00:10 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-280
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-280\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-280\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-280\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-280\special_tokens_map.json
+07/27/2023 03:00:12 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-280
+07/27/2023 03:00:13 - INFO - __main__ -   EVALERR:  0.0029023794853128494
+7500it [02:44, 40.81it/s]07/27/2023 03:00:19 - INFO - __main__ - {'rouge1': 85.7576, 'rouge2': 81.1741, 'rougeL': 84.4368, 'rougeLsum': 83.8013}
+07/27/2023 03:00:19 - INFO - __main__ - {'bleu': 0.7044533766627018, 'precisions': [0.9254385964912281, 0.8846153846153846, 0.8617021276595744, 0.8392857142857143], 'brevity_penalty': 0.8030821666988891, 'length_ratio': 0.8201438848920863, 'translation_length': 228, 'reference_length': 278}
+../SMF/ckpt\valid-step-300
+07/27/2023 03:00:19 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-300
+07/27/2023 03:00:23 - INFO - __main__ - {'rouge1': 85.7576, 'rouge2': 81.1741, 'rougeL': 84.4368, 'rougeLsum': 83.8013}
+07/27/2023 03:00:23 - INFO - __main__ - {'bleu': 0.7044533766627018, 'precisions': [0.9254385964912281, 0.8846153846153846, 0.8617021276595744, 0.8392857142857143], 'brevity_penalty': 0.8030821666988891, 'length_ratio': 0.8201438848920863, 'translation_length': 228, 'reference_length': 278}
+../SMF/ckpt\test-step-300
+07/27/2023 03:00:23 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-300
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-300\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-300\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-300\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-300\special_tokens_map.json
+07/27/2023 03:00:26 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-300
+07/27/2023 03:00:26 - INFO - __main__ -   EVALERR:  0.002386978250928223
+8000it [02:57, 39.44it/s]07/27/2023 03:00:33 - INFO - __main__ - {'rouge1': 83.8852, 'rouge2': 78.5549, 'rougeL': 82.5511, 'rougeLsum': 82.0265}
+07/27/2023 03:00:33 - INFO - __main__ - {'bleu': 0.6842529067848804, 'precisions': [0.8995633187772926, 0.8516746411483254, 0.8306878306878307, 0.8106508875739645], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\valid-step-320
+07/27/2023 03:00:33 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-320
+07/27/2023 03:00:36 - INFO - __main__ - {'rouge1': 83.8852, 'rouge2': 78.5549, 'rougeL': 82.5511, 'rougeLsum': 82.0265}
+07/27/2023 03:00:36 - INFO - __main__ - {'bleu': 0.6842529067848804, 'precisions': [0.8995633187772926, 0.8516746411483254, 0.8306878306878307, 0.8106508875739645], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\test-step-320
+07/27/2023 03:00:36 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-320
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-320\config.json
+8000it [03:08, 39.44it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-320\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-320\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-320\special_tokens_map.json
+07/27/2023 03:00:42 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-320
+07/27/2023 03:00:42 - INFO - __main__ -   EVALERR:  0.002191441921517253
+8500it [03:13, 36.82it/s]07/27/2023 03:00:49 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:00:49 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-340
+07/27/2023 03:00:49 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-340
+07/27/2023 03:00:52 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:00:52 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-340
+07/27/2023 03:00:52 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-340
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-340\config.json
+8500it [03:28, 36.82it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-340\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-340\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-340\special_tokens_map.json
+07/27/2023 03:00:57 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-340
+07/27/2023 03:00:57 - INFO - __main__ -   EVALERR:  0.001978571642190218
+9000it [03:29, 35.39it/s]07/27/2023 03:01:04 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:01:04 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\valid-step-360
+07/27/2023 03:01:04 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-360
+07/27/2023 03:01:08 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:01:08 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\test-step-360
+07/27/2023 03:01:08 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-360
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-360\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-360\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-360\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-360\special_tokens_map.json
+07/27/2023 03:01:11 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-360
+07/27/2023 03:01:12 - INFO - __main__ -   EVALERR:  0.0017791430708020924
+9500it [03:43, 35.23it/s]07/27/2023 03:01:19 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:01:19 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-380
+07/27/2023 03:01:19 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-380
+07/27/2023 03:01:22 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:01:22 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-380
+07/27/2023 03:01:22 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-380
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-380\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-380\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-380\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-380\special_tokens_map.json
+07/27/2023 03:01:24 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-380
+07/27/2023 03:01:25 - INFO - __main__ -   EVALERR:  0.0017930742986500263
+10000it [03:56, 36.03it/s]07/27/2023 03:01:32 - INFO - __main__ - {'rouge1': 84.1717, 'rouge2': 78.4524, 'rougeL': 82.4522, 'rougeLsum': 81.8429}
+07/27/2023 03:01:32 - INFO - __main__ - {'bleu': 0.6856121766062128, 'precisions': [0.9082969432314411, 0.8564593301435407, 0.8306878306878307, 0.8047337278106509], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\valid-step-400
+07/27/2023 03:01:32 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-400
+07/27/2023 03:01:35 - INFO - __main__ - {'rouge1': 84.1717, 'rouge2': 78.4524, 'rougeL': 82.4522, 'rougeLsum': 81.8429}
+07/27/2023 03:01:35 - INFO - __main__ - {'bleu': 0.6856121766062128, 'precisions': [0.9082969432314411, 0.8564593301435407, 0.8306878306878307, 0.8047337278106509], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\test-step-400
+07/27/2023 03:01:35 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-400
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-400\config.json
+10000it [04:08, 36.03it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-400\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-400\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-400\special_tokens_map.json
+07/27/2023 03:01:39 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-400
+07/27/2023 03:01:39 - INFO - __main__ -   EVALERR:  0.0019559079725295307
+10500it [04:11, 35.45it/s]07/27/2023 03:01:46 - INFO - __main__ - {'rouge1': 81.5098, 'rouge2': 75.4285, 'rougeL': 80.0669, 'rougeLsum': 79.4118}
+07/27/2023 03:01:46 - INFO - __main__ - {'bleu': 0.6554909325594193, 'precisions': [0.8888888888888888, 0.8341463414634146, 0.8108108108108109, 0.7878787878787878], 'brevity_penalty': 0.7901317655802487, 'length_ratio': 0.8093525179856115, 'translation_length': 225, 'reference_length': 278}
+../SMF/ckpt\valid-step-420
+07/27/2023 03:01:46 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-420
+07/27/2023 03:01:50 - INFO - __main__ - {'rouge1': 81.5098, 'rouge2': 75.4285, 'rougeL': 80.0669, 'rougeLsum': 79.4118}
+07/27/2023 03:01:50 - INFO - __main__ - {'bleu': 0.6554909325594193, 'precisions': [0.8888888888888888, 0.8341463414634146, 0.8108108108108109, 0.7878787878787878], 'brevity_penalty': 0.7901317655802487, 'length_ratio': 0.8093525179856115, 'translation_length': 225, 'reference_length': 278}
+../SMF/ckpt\test-step-420
+07/27/2023 03:01:50 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-420
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-420\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-420\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-420\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-420\special_tokens_map.json
+07/27/2023 03:01:54 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-420
+07/27/2023 03:01:54 - INFO - __main__ -   EVALERR:  0.0013129291431978345
+11000it [04:25, 35.08it/s]07/27/2023 03:02:01 - INFO - __main__ - {'rouge1': 84.1717, 'rouge2': 78.4524, 'rougeL': 82.4522, 'rougeLsum': 81.8429}
+07/27/2023 03:02:01 - INFO - __main__ - {'bleu': 0.6856121766062128, 'precisions': [0.9082969432314411, 0.8564593301435407, 0.8306878306878307, 0.8047337278106509], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\valid-step-440
+07/27/2023 03:02:01 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-440
+07/27/2023 03:02:04 - INFO - __main__ - {'rouge1': 84.1717, 'rouge2': 78.4524, 'rougeL': 82.4522, 'rougeLsum': 81.8429}
+07/27/2023 03:02:04 - INFO - __main__ - {'bleu': 0.6856121766062128, 'precisions': [0.9082969432314411, 0.8564593301435407, 0.8306878306878307, 0.8047337278106509], 'brevity_penalty': 0.8073695385325959, 'length_ratio': 0.8237410071942446, 'translation_length': 229, 'reference_length': 278}
+../SMF/ckpt\test-step-440
+07/27/2023 03:02:04 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-440
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-440\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-440\pytorch_model.bin
+11000it [04:38, 35.08it/s]tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-440\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-440\special_tokens_map.json
+07/27/2023 03:02:07 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-440
+07/27/2023 03:02:08 - INFO - __main__ -   EVALERR:  0.001633444809820503
+11500it [04:39, 35.59it/s]07/27/2023 03:02:15 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:02:15 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-460
+07/27/2023 03:02:15 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-460
+07/27/2023 03:02:18 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:02:18 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-460
+07/27/2023 03:02:18 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-460
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-460\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-460\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-460\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-460\special_tokens_map.json
+07/27/2023 03:02:21 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-460
+07/27/2023 03:02:21 - INFO - __main__ -   EVALERR:  0.0010691438405774534
+12000it [04:52, 36.02it/s]07/27/2023 03:02:28 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:02:28 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-480
+07/27/2023 03:02:28 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-480
+07/27/2023 03:02:31 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:02:31 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-480
+07/27/2023 03:02:31 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-480
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-480\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-480\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-480\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-480\special_tokens_map.json
+07/27/2023 03:02:36 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-480
+07/27/2023 03:02:36 - INFO - __main__ -   EVALERR:  0.0008393606343306601
+12500it [05:08, 34.93it/s]07/27/2023 03:02:44 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:02:44 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-500
+07/27/2023 03:02:44 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-500
+12500it [05:18, 34.93it/s]07/27/2023 03:02:47 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:02:47 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-500
+07/27/2023 03:02:47 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-500
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-500\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-500\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-500\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-500\special_tokens_map.json
+07/27/2023 03:02:50 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-500
+07/27/2023 03:02:50 - INFO - __main__ -   EVALERR:  0.0010756624625064433
+13000it [05:22, 35.17it/s]07/27/2023 03:02:58 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:02:58 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-520
+07/27/2023 03:02:58 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-520
+07/27/2023 03:03:02 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:03:02 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-520
+07/27/2023 03:03:02 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-520
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-520\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-520\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-520\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-520\special_tokens_map.json
+07/27/2023 03:03:03 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-520
+07/27/2023 03:03:04 - INFO - __main__ -   EVALERR:  0.0007259602127596736
+13500it [05:35, 36.00it/s]07/27/2023 03:03:11 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:03:11 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-540
+07/27/2023 03:03:11 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-540
+07/27/2023 03:03:15 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:03:15 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-540
+07/27/2023 03:03:15 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-540
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-540\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-540\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-540\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-540\special_tokens_map.json
+07/27/2023 03:03:17 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-540
+07/27/2023 03:03:17 - INFO - __main__ -   EVALERR:  0.0011363781420513988
+14000it [05:48, 36.46it/s]07/27/2023 03:03:24 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:03:24 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-560
+07/27/2023 03:03:24 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-560
+14000it [05:58, 36.46it/s]07/27/2023 03:03:28 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:03:28 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-560
+07/27/2023 03:03:28 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-560
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-560\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-560\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-560\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-560\special_tokens_map.json
+07/27/2023 03:03:31 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-560
+07/27/2023 03:03:31 - INFO - __main__ -   EVALERR:  0.0009901607260107994
+14500it [06:03, 35.80it/s]07/27/2023 03:03:39 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:03:39 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-580
+07/27/2023 03:03:39 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-580
+07/27/2023 03:03:42 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:03:42 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-580
+07/27/2023 03:03:42 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-580
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-580\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-580\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-580\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-580\special_tokens_map.json
+07/27/2023 03:03:44 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-580
+07/27/2023 03:03:45 - INFO - __main__ -   EVALERR:  0.0007745985500514507
+15000it [06:16, 36.39it/s]07/27/2023 03:03:52 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:03:52 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-600
+07/27/2023 03:03:52 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-600
+07/27/2023 03:03:55 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:03:55 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-600
+07/27/2023 03:03:55 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-600
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-600\config.json
+15000it [06:29, 36.39it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-600\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-600\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-600\special_tokens_map.json
+07/27/2023 03:03:59 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-600
+07/27/2023 03:03:59 - INFO - __main__ -   EVALERR:  0.0007184726418927312
+15500it [06:30, 35.88it/s]07/27/2023 03:04:06 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:04:06 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-620
+07/27/2023 03:04:06 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-620
+07/27/2023 03:04:10 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:04:10 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-620
+07/27/2023 03:04:10 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-620
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-620\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-620\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-620\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-620\special_tokens_map.json
+07/27/2023 03:04:12 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-620
+07/27/2023 03:04:12 - INFO - __main__ -   EVALERR:  0.0010877439808100462
+16000it [06:44, 36.34it/s]07/27/2023 03:04:19 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:04:19 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-640
+07/27/2023 03:04:19 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-640
+07/27/2023 03:04:23 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:04:23 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-640
+07/27/2023 03:04:23 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-640
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-640\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-640\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-640\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-640\special_tokens_map.json
+07/27/2023 03:04:26 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-640
+07/27/2023 03:04:27 - INFO - __main__ -   EVALERR:  0.000847342703025788
+16500it [06:58, 35.81it/s]07/27/2023 03:04:34 - INFO - __main__ - {'rouge1': 83.169, 'rouge2': 77.6787, 'rougeL': 81.5717, 'rougeLsum': 80.9559}
+07/27/2023 03:04:34 - INFO - __main__ - {'bleu': 0.675502154533498, 'precisions': [0.9026548672566371, 0.8543689320388349, 0.8333333333333334, 0.8132530120481928], 'brevity_penalty': 0.794463292906238, 'length_ratio': 0.8129496402877698, 'translation_length': 226, 'reference_length': 278}
+../SMF/ckpt\valid-step-660
+07/27/2023 03:04:34 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-660
+07/27/2023 03:04:37 - INFO - __main__ - {'rouge1': 83.169, 'rouge2': 77.6787, 'rougeL': 81.5717, 'rougeLsum': 80.9559}
+07/27/2023 03:04:37 - INFO - __main__ - {'bleu': 0.675502154533498, 'precisions': [0.9026548672566371, 0.8543689320388349, 0.8333333333333334, 0.8132530120481928], 'brevity_penalty': 0.794463292906238, 'length_ratio': 0.8129496402877698, 'translation_length': 226, 'reference_length': 278}
+../SMF/ckpt\test-step-660
+07/27/2023 03:04:37 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-660
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-660\config.json
+16500it [07:09, 35.81it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-660\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-660\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-660\special_tokens_map.json
+07/27/2023 03:04:40 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-660
+07/27/2023 03:04:40 - INFO - __main__ -   EVALERR:  0.000737895811907947
+17000it [07:11, 36.50it/s]07/27/2023 03:04:47 - INFO - __main__ - {'rouge1': 83.8893, 'rouge2': 78.5077, 'rougeL': 82.2294, 'rougeLsum': 81.6179}
+07/27/2023 03:04:47 - INFO - __main__ - {'bleu': 0.6792297555920735, 'precisions': [0.9151785714285714, 0.8676470588235294, 0.8478260869565217, 0.8292682926829268], 'brevity_penalty': 0.7857854968482537, 'length_ratio': 0.8057553956834532, 'translation_length': 224, 'reference_length': 278}
+../SMF/ckpt\valid-step-680
+07/27/2023 03:04:47 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-680
+07/27/2023 03:04:50 - INFO - __main__ - {'rouge1': 83.8893, 'rouge2': 78.5077, 'rougeL': 82.2294, 'rougeLsum': 81.6179}
+07/27/2023 03:04:50 - INFO - __main__ - {'bleu': 0.6792297555920735, 'precisions': [0.9151785714285714, 0.8676470588235294, 0.8478260869565217, 0.8292682926829268], 'brevity_penalty': 0.7857854968482537, 'length_ratio': 0.8057553956834532, 'translation_length': 224, 'reference_length': 278}
+../SMF/ckpt\test-step-680
+07/27/2023 03:04:50 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-680
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-680\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-680\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-680\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-680\special_tokens_map.json
+07/27/2023 03:04:54 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-680
+07/27/2023 03:04:54 - INFO - __main__ -   EVALERR:  0.0005918395495973527
+17500it [07:25, 36.01it/s]07/27/2023 03:05:01 - INFO - __main__ - {'rouge1': 83.8893, 'rouge2': 78.5077, 'rougeL': 82.2294, 'rougeLsum': 81.6179}
+07/27/2023 03:05:01 - INFO - __main__ - {'bleu': 0.6792297555920735, 'precisions': [0.9151785714285714, 0.8676470588235294, 0.8478260869565217, 0.8292682926829268], 'brevity_penalty': 0.7857854968482537, 'length_ratio': 0.8057553956834532, 'translation_length': 224, 'reference_length': 278}
+../SMF/ckpt\valid-step-700
+07/27/2023 03:05:01 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-700
+07/27/2023 03:05:05 - INFO - __main__ - {'rouge1': 83.8893, 'rouge2': 78.5077, 'rougeL': 82.2294, 'rougeLsum': 81.6179}
+07/27/2023 03:05:05 - INFO - __main__ - {'bleu': 0.6792297555920735, 'precisions': [0.9151785714285714, 0.8676470588235294, 0.8478260869565217, 0.8292682926829268], 'brevity_penalty': 0.7857854968482537, 'length_ratio': 0.8057553956834532, 'translation_length': 224, 'reference_length': 278}
+../SMF/ckpt\test-step-700
+07/27/2023 03:05:05 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-700
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-700\config.json
+17500it [07:39, 36.01it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-700\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-700\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-700\special_tokens_map.json
+07/27/2023 03:05:08 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-700
+07/27/2023 03:05:09 - INFO - __main__ -   EVALERR:  0.0006822682667989284
+18000it [07:40, 35.66it/s]07/27/2023 03:05:15 - INFO - __main__ - {'rouge1': 83.8893, 'rouge2': 78.5077, 'rougeL': 82.2294, 'rougeLsum': 81.6179}
+07/27/2023 03:05:15 - INFO - __main__ - {'bleu': 0.6792297555920735, 'precisions': [0.9151785714285714, 0.8676470588235294, 0.8478260869565217, 0.8292682926829268], 'brevity_penalty': 0.7857854968482537, 'length_ratio': 0.8057553956834532, 'translation_length': 224, 'reference_length': 278}
+../SMF/ckpt\valid-step-720
+07/27/2023 03:05:15 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-720
+07/27/2023 03:05:19 - INFO - __main__ - {'rouge1': 83.8893, 'rouge2': 78.5077, 'rougeL': 82.2294, 'rougeLsum': 81.6179}
+07/27/2023 03:05:19 - INFO - __main__ - {'bleu': 0.6792297555920735, 'precisions': [0.9151785714285714, 0.8676470588235294, 0.8478260869565217, 0.8292682926829268], 'brevity_penalty': 0.7857854968482537, 'length_ratio': 0.8057553956834532, 'translation_length': 224, 'reference_length': 278}
+../SMF/ckpt\test-step-720
+07/27/2023 03:05:19 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-720
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-720\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-720\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-720\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-720\special_tokens_map.json
+07/27/2023 03:05:22 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-720
+07/27/2023 03:05:23 - INFO - __main__ -   EVALERR:  0.0004889283373486251
+18500it [07:54, 35.65it/s]07/27/2023 03:05:30 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:05:30 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\valid-step-740
+07/27/2023 03:05:30 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-740
+07/27/2023 03:05:33 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:05:33 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\test-step-740
+07/27/2023 03:05:33 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-740
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-740\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-740\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-740\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-740\special_tokens_map.json
+07/27/2023 03:05:36 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-740
+07/27/2023 03:05:37 - INFO - __main__ -   EVALERR:  0.0005482106162235141
+19000it [08:08, 35.51it/s]07/27/2023 03:05:44 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:05:44 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\valid-step-760
+07/27/2023 03:05:44 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-760
+07/27/2023 03:05:47 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:05:47 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\test-step-760
+07/27/2023 03:05:47 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-760
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-760\config.json
+19000it [08:19, 35.51it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-760\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-760\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-760\special_tokens_map.json
+07/27/2023 03:05:50 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-760
+07/27/2023 03:05:51 - INFO - __main__ -   EVALERR:  0.0005881357043981552
+19500it [08:22, 35.46it/s]07/27/2023 03:05:58 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:05:58 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\valid-step-780
+07/27/2023 03:05:58 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-780
+07/27/2023 03:06:02 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:06:02 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\test-step-780
+07/27/2023 03:06:02 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-780
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-780\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-780\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-780\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-780\special_tokens_map.json
+07/27/2023 03:06:05 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-780
+07/27/2023 03:06:05 - INFO - __main__ -   EVALERR:  0.0005836056345142424
+20000it [08:37, 35.24it/s]07/27/2023 03:06:13 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:06:13 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\valid-step-800
+07/27/2023 03:06:13 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-800
+07/27/2023 03:06:16 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:06:16 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\test-step-800
+07/27/2023 03:06:16 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-800
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-800\config.json
+20000it [08:55, 35.24it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-800\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-800\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-800\special_tokens_map.json
+07/27/2023 03:06:26 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-800
+07/27/2023 03:06:27 - INFO - __main__ -   EVALERR:  0.000550601773429662
+20500it [08:58, 30.66it/s]07/27/2023 03:06:34 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:06:34 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\valid-step-820
+07/27/2023 03:06:34 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-820
+07/27/2023 03:06:37 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:06:37 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\test-step-820
+07/27/2023 03:06:37 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-820
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-820\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-820\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-820\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-820\special_tokens_map.json
+07/27/2023 03:06:39 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-820
+07/27/2023 03:06:39 - INFO - __main__ -   EVALERR:  0.0004937489600852132
+21000it [09:11, 32.71it/s]07/27/2023 03:06:46 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:06:46 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\valid-step-840
+07/27/2023 03:06:46 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-840
+07/27/2023 03:06:50 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:06:50 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\test-step-840
+07/27/2023 03:06:50 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-840
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-840\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-840\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-840\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-840\special_tokens_map.json
+07/27/2023 03:06:52 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-840
+07/27/2023 03:06:52 - INFO - __main__ -   EVALERR:  0.00047097456443589183
+21500it [09:23, 34.43it/s]07/27/2023 03:06:59 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:06:59 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\valid-step-860
+07/27/2023 03:06:59 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-860
+07/27/2023 03:07:03 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:07:03 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\test-step-860
+07/27/2023 03:07:03 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-860
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-860\config.json
+21500it [09:36, 34.43it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-860\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-860\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-860\special_tokens_map.json
+07/27/2023 03:07:07 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-860
+07/27/2023 03:07:07 - INFO - __main__ -   EVALERR:  0.0006917602233588695
+22000it [09:38, 34.28it/s]07/27/2023 03:07:14 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:07:14 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\valid-step-880
+07/27/2023 03:07:14 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-880
+07/27/2023 03:07:18 - INFO - __main__ - {'rouge1': 86.4301, 'rouge2': 80.54, 'rougeL': 84.9746, 'rougeLsum': 84.1739}
+07/27/2023 03:07:18 - INFO - __main__ - {'bleu': 0.7083865449537287, 'precisions': [0.9071729957805907, 0.8525345622119815, 0.8223350253807107, 0.7909604519774012], 'brevity_penalty': 0.8411411639559709, 'length_ratio': 0.8525179856115108, 'translation_length': 237, 'reference_length': 278}
+../SMF/ckpt\test-step-880
+07/27/2023 03:07:18 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-880
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-880\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-880\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-880\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-880\special_tokens_map.json
+07/27/2023 03:07:19 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-880
+07/27/2023 03:07:20 - INFO - __main__ -   EVALERR:  0.0007030978528782725
+22500it [09:51, 35.64it/s]07/27/2023 03:07:27 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:07:27 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-900
+07/27/2023 03:07:27 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-900
+07/27/2023 03:07:31 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:07:31 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-900
+07/27/2023 03:07:31 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-900
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-900\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-900\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-900\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-900\special_tokens_map.json
+07/27/2023 03:07:33 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-900
+07/27/2023 03:07:34 - INFO - __main__ -   EVALERR:  0.00043669133796356616
+23000it [10:05, 35.64it/s]07/27/2023 03:07:41 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:07:41 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-920
+07/27/2023 03:07:41 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-920
+23000it [10:16, 35.64it/s]07/27/2023 03:07:46 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:07:46 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-920
+07/27/2023 03:07:46 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-920
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-920\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-920\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-920\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-920\special_tokens_map.json
+07/27/2023 03:07:48 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-920
+07/27/2023 03:07:48 - INFO - __main__ -   EVALERR:  0.0007490496784448624
+23500it [10:20, 35.13it/s]07/27/2023 03:07:56 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:07:56 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-940
+07/27/2023 03:07:56 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-940
+07/27/2023 03:07:59 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:07:59 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-940
+07/27/2023 03:07:59 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-940
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-940\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-940\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-940\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-940\special_tokens_map.json
+07/27/2023 03:08:03 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-940
+07/27/2023 03:08:03 - INFO - __main__ -   EVALERR:  0.0005915518675465136
+24000it [10:35, 34.65it/s]07/27/2023 03:08:10 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:08:10 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-960
+07/27/2023 03:08:10 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-960
+07/27/2023 03:08:14 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:08:14 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-960
+07/27/2023 03:08:14 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-960
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-960\config.json
+24000it [10:46, 34.65it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-960\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-960\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-960\special_tokens_map.json
+07/27/2023 03:08:18 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-960
+07/27/2023 03:08:18 - INFO - __main__ -   EVALERR:  0.0004902684425469488
+24500it [10:49, 34.49it/s]07/27/2023 03:08:25 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:08:25 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-980
+07/27/2023 03:08:25 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-980
+07/27/2023 03:08:29 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:08:29 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-980
+07/27/2023 03:08:29 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-980
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-980\config.json
+Model weights saved in ../SMF/ckpt\checkpoint-epoch-980\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-980\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-980\special_tokens_map.json
+07/27/2023 03:08:31 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-980
+07/27/2023 03:08:32 - INFO - __main__ -   EVALERR:  0.0005830469820648432
+25000it [11:03, 34.93it/s]07/27/2023 03:08:39 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:08:39 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\valid-step-1000
+07/27/2023 03:08:39 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\valid-step-1000
+07/27/2023 03:08:43 - INFO - __main__ - {'rouge1': 85.6777, 'rouge2': 80.2085, 'rougeL': 83.9377, 'rougeLsum': 83.3434}
+07/27/2023 03:08:43 - INFO - __main__ - {'bleu': 0.7024109784840347, 'precisions': [0.9177489177489178, 0.8672985781990521, 0.8429319371727748, 0.8187134502923976], 'brevity_penalty': 0.8159002260730132, 'length_ratio': 0.8309352517985612, 'translation_length': 231, 'reference_length': 278}
+../SMF/ckpt\test-step-1000
+07/27/2023 03:08:43 - INFO - __main__ - Saving model outputs to ../SMF/ckpt\test-step-1000
+Configuration saved in ../SMF/ckpt\checkpoint-epoch-1000\config.json
+25000it [11:16, 34.93it/s]Model weights saved in ../SMF/ckpt\checkpoint-epoch-1000\pytorch_model.bin
+tokenizer config file saved in ../SMF/ckpt\checkpoint-epoch-1000\tokenizer_config.json
+Special tokens file saved in ../SMF/ckpt\checkpoint-epoch-1000\special_tokens_map.json
+07/27/2023 03:08:45 - INFO - __main__ - Saving model checkpoint to ../SMF/ckpt\checkpoint-epoch-1000
+25000it [11:16, 36.93it/s]
