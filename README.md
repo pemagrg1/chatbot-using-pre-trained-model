@@ -18,20 +18,34 @@ Future work includes expanding the training data for dialogue, improving dataset
 1. SMF
 [Folder](SMF)
 
-2. SMF/ckpt
+This is the folder where we store files relating to our fine-tuned model, including datasets, fine-tuned models with checkpoints, server file. 
+
+3. SMF/ckpt
 [Folder](SMF/ckpt/)
 
-3. SMF/json_data
+This is the folder where checkpoints are stored(It is too large for uploading in Github). 
+
+4. SMF/json_data
 [Folder](SMF/json_data/)
 
-4. SMF/analysis.py
+This is the folder where datasets are stored.
+new_train_data.jsonl and new_test_data.jsonl are the datasets with knowledge. 
+new_train_data.jsonl and new_test_data.jsonl are the datasets without knowledge. 
+
+5. SMF/analysis.py
 [File](SMF/analysis.py)
 
-5. SMF/SMF_dataset.py
+This is the file for analysis. 
+
+6. SMF/SMF_dataset.py
 [File](SMF/SMF_dataset.py)
 
-6. SMF/SMF_server.py
+This is the file for loading the dataset used in fine-tuning phases.
+
+7. SMF/SMF_server.py
 [File](SMF/SMF_server.py)
+
+This is the file for running the server using our fine-tuned model.
 
 ## SETUP
 [GODEL](https://github.com/microsoft/GODEL.git)
