@@ -54,7 +54,10 @@ This is the file for loading the dataset used in fine-tuning phases.
 This is the file for running the server using our fine-tuned model.
 
 ## SETUP
-[GODEL](https://github.com/microsoft/GODEL.git)
+```
+$ git clone https://github.com/pemagrg1/chatbot-using-pre-trained-model.git
+```
+
 1. Clone the GODEL repo
 ```
 $ git clone https://github.com/microsoft/GODEL.git
@@ -68,12 +71,20 @@ pip install -r GODEL/requirements.txt
 $ git lfs install
 $ git clone https://huggingface.co/microsoft/GODEL-v1_1-base-seq2seq
 ```
+4. change paths in SMF/SMF_dataset.py
+```
+train_path = 'SMF/json_data/new_train_data.jsonl'
+validation_path = 'SMF/json_data/new_test_data.jsonl'
+test_path = 'SMF/json_data/new_test_data.jsonl'
+```
 
 ## Fine-tuning
 ```
-python train.py --model_name_or_path GODEL-v1_1-base-seq2seq \
-	--dataset_name SMF/SMF_dataset.py \
-	--output_dir SMF/ckpt \
+$ cd chatbot-using-pre-trained-model/GODEL/GODEL
+
+$ python train.py --model_name_or_path /chatbot-using-pre-trained-model/GODEL-v1_1-base-seq2seq \
+	--dataset_name /chatbot-using-pre-trained-model/SMF/SMF_dataset.py \
+	--output_dir /chatbot-using-pre-trained-model/SMF/ckpt \
 	--per_device_train_batch_size=2 \
 	--per_device_eval_batch_size=4 \
 	--max_target_length 128 \
