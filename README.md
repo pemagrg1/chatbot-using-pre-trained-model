@@ -18,7 +18,7 @@ Future work includes expanding the training data for dialogue, improving dataset
 1. SMF
 [Folder](SMF)
 
-This is the folder where we store files relating to our fine-tuned model, including datasets, fine-tuned models with checkpoints, server file. 
+This is the folder where we store files relating to our fine-tuned model, including datasets, fine-tuned models with checkpoints, and the server file. 
 
 3. SMF/ckpt
 [Folder](SMF/ckpt/)
