@@ -71,12 +71,6 @@ pip install -r GODEL/requirements.txt
 $ git lfs install
 $ git clone https://huggingface.co/microsoft/GODEL-v1_1-base-seq2seq
 ```
-4. change paths in SMF/SMF_dataset.py
-```
-train_path = 'SMF/json_data/new_train_data.jsonl'
-validation_path = 'SMF/json_data/new_test_data.jsonl'
-test_path = 'SMF/json_data/new_test_data.jsonl'
-```
 
 ## Fine-tuning
 ```
@@ -108,3 +102,5 @@ npm run serve
 ```
 python SMF/SMF_server.py # start the sever and expose 8080
 ```
+3. Open localhost:8080 on the browser
+<br> Note: If you get eslint issue with npm, do "npm i -D eslint@7.32.0" 

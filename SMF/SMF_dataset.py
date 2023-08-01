@@ -39,9 +39,9 @@ class SMF(datasets.GeneratorBasedBuilder):
 
     def _split_generators(self, dl_manager):
 
-        train_path = 'json_data/train_music_feat.jsonl'
-        validation_path = 'json_data/test_music_feat.jsonl'
-        test_path = 'json_data/test_music_feat.jsonl'
+        train_path = 'SMF/json_data/new_train_data.jsonl'
+        validation_path = 'SMF/json_data/new_test_data.jsonl'
+        test_path = 'SMF/json_data/new_test_data.jsonl' 
         return [
             datasets.SplitGenerator(name=datasets.Split.TRAIN, gen_kwargs={
                                     "filepath": train_path}),

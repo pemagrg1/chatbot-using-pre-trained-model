@@ -54,7 +54,7 @@ if __name__ == "__main__":
     from server import *
     # replace the path with your trained checkpoint
     #args.model_name_or_path = 'ckpt\checkpoint-epoch-15'
-    args.model_name_or_path = 'ckpt\checkpoint-epoch-700'
+    args.model_name_or_path = '/Volumes/MacPema/Stuttgart/Sem1_Courses/DialogueSystem1_3/Proj/chatbot-using-pre-trained-model/SMF/ckpt/checkpoint-epoch-700'
     main()
 
     worker = Thread(target=generate_for_queue, args=(rgi_queue, rgo_queue,))
