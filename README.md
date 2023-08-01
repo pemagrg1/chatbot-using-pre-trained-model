@@ -34,29 +34,24 @@ new_train_data.jsonl and new_test_data.jsonl are the datasets with knowledge.
 
 new_train_data.jsonl and new_test_data.jsonl are the datasets without knowledge. 
 
+5. SMF/terminal records
+[Folder](<SMF/terminal records/>)
+This is the folder where terminal records are stored. Terminal records are files that record the terminal inputs and outputs. 
 
-5. SMF/analysis.py
+6. SMF/analysis.py
 [File](SMF/analysis.py)
 
 This is the file for analysis. 
 
-6. SMF/SMF_dataset.py
+7. SMF/SMF_dataset.py
 [File](SMF/SMF_dataset.py)
 
 This is the file for loading the dataset used in fine-tuning phases.
 
-7. SMF/SMF_server.py
+8. SMF/SMF_server.py
 [File](SMF/SMF_server.py)
 
 This is the file for running the server using our fine-tuned model.
-
-8. SMF/terminal records(with knowlegde).txt
-[File](SMF/terminal records(with knowlegde).txt)
-
-9. SMF/terminal records(without knowlegde).txt
-[File](SMF/terminal records(without knowlegde).txt)
-
-8. and 9. are files that record the terminal inputs and outputs. 
 
 ## SETUP
 [GODEL](https://github.com/microsoft/GODEL.git)
