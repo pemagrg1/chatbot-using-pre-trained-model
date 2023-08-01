@@ -34,8 +34,9 @@ new_train_data.jsonl and new_test_data.jsonl are the datasets with knowledge.
 
 new_train_data.jsonl and new_test_data.jsonl are the datasets without knowledge. 
 
-5. SMF/terminal records
+5. SMF/terminal records 
 [Folder](<SMF/terminal records/>)
+
 This is the folder where terminal records are stored. Terminal records are files that record the terminal inputs and outputs. 
 
 6. SMF/analysis.py
